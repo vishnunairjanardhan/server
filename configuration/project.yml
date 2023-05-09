@@ -1,0 +1,9 @@
+## project settings
+payment:
+  adyen:
+    apiKey: AQEshmfxKI/IYhxBw0m/n3Q5qf3VEdJgBJ1OS0xYxVV71x+ld6aWzubpznLsRuwQwV1bDb7kfNy1WIxIIkxgBw==-E25lUs4//2LRKJeBVJe1/Y4F2rMSzl82aDWDbgL5b3M=-[IKF6D?.wt,?p&NQ
+    merchantAccount: 99MindsIncECOM
+    clientKey: test_7VABRUFOCBGZTLA6AUP6TJJKREWEF7J6
+    baseUrl: https://checkout-test.adyen.com/v69
+    hmacKey: A4986011E92F576AAF05529D8991C501FB03E7ABE644518132B0103F4535B155
+## other configurations

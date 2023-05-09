@@ -1,0 +1,37 @@
+{
+    "commercetools": {
+      "commercetoolsProjectKey1": {
+        "clientId": "8zcJWwYuVfm0iLQD3lxxsYGU",
+        "clientSecret": "39YbgbFfVF1Ui-mustfJmWk4E7yvnzPN"
+      },
+      "commercetoolsProjectKey2": {
+        "clientId": "8zcJWwYuVfm0iLQD3lxxsYGU",
+        "clientSecret": "39YbgbFfVF1Ui-mustfJmWk4E7yvnzPN"
+      }
+    },
+    "adyen": {
+      "adyenMerchantAccount1": {
+        "apiKey": "AQEshmfxKI/IYhxBw0m/n3Q5qf3VEdJgBJ1OS0xYxVV71x+ld6aWzubpznLsRuwQwV1bDb7kfNy1WIxIIkxgBw==-98OwlX41fAPGmmPmT+akJ3HVHrEggSfOA5cUsJVTfoQ=-A6CRcyBIumnh*R&="
+      },
+      "adyenMerchantAccount2": {
+        "apiKey": "AQEshmfxKI/IYhxBw0m/n3Q5qf3VEdJgBJ1OS0xYxVV71x+ld6aWzubpznLsRuwQwV1bDb7kfNy1WIxIIkxgBw==-98OwlX41fAPGmmPmT+akJ3HVHrEggSfOA5cUsJVTfoQ=-A6CRcyBIumnh*R&="
+      }
+    },
+    "adyenPaymentMethodsToNames": {
+      "scheme": {
+        "en": "Credit Card"
+      },
+      "pp": {
+        "en": "PayPal"
+      },
+      "klarna": {
+        "en": "Klarna"
+      },
+      "gpay": {
+        "en": "Google Pay"
+      },
+      "affirm": {
+        "en": "Affirm"
+      }
+    }
+  }
