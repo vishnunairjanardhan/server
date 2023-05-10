@@ -11,7 +11,7 @@ require 'httparty'
 # set :static, true
 set :port, 4242
 
-YOUR_DOMAIN = 'http://localhost:3000'
+YOUR_DOMAIN = 'http://localhost:3000/sucsess'
 Stripe.api_key = 'sk_test_51MyqLjSI2D9QZHezmFOXiVtw4idzlxFMr5x9KDtvJxfoxkKtFkoRnoYBz1Lna3L6HGQ5vbTVobO9pp0NzfQkeuBy00MgMgIC3y'
 
 #  code for to get all carts 
@@ -20,7 +20,7 @@ apiendpointforcreatingcart='https://api.us-central1.gcp.commercetools.com/obongg
 apiendpointAddItemShippingAddress='https://api.us-central1.gcp.commercetools.com/obongg26te1hxzh/carts/b3f70512-c72a-480f-8070-2c83ed5b125e'  #this is cart id
 
 headers = {
-  'Authorization' =>'Bearer XQ0QL8OKMTdJnlT-VgB1GGeYJXQuv7nY'
+  'Authorization' =>'Bearer WGaTgMuVPawh6vDkLjNvcgf39BPVlDF2'
   }
 
 post '/create-checkout-session' do
@@ -40,10 +40,13 @@ post '/create-checkout-session' do
     # These placeholder URLs will be replaced in a following step.
     success_url: YOUR_DOMAIN + '?success=true',
     cancel_url: YOUR_DOMAIN + '?canceled=true',
+    
   })
+  redirect session.url, 303
+  
   puts(session,"chek this bro")
   
-  redirect session.url
-
+ 
+puts(session1,"kirlum d chirlum")
  
 end
