@@ -20,7 +20,7 @@ apiendpointforcreatingcart='https://api.us-central1.gcp.commercetools.com/obongg
 apiendpointAddItemShippingAddress='https://api.us-central1.gcp.commercetools.com/obongg26te1hxzh/carts/b3f70512-c72a-480f-8070-2c83ed5b125e'  #this is cart id
 
 headers = {
-  'Authorization' =>'Bearer WGaTgMuVPawh6vDkLjNvcgf39BPVlDF2'
+  'Authorization' =>'Bearer gyqgh-0_yw9R1_5ipE3hV7WzdtpicUfA'
   }
 
 post '/create-checkout-session' do
@@ -29,7 +29,7 @@ post '/create-checkout-session' do
   pop=response.body
 
   ruby_hash = JSON.parse(pop)
-  arrayoflineitems=ruby_hash['results'][9]["lineItems"]
+  arrayoflineitems=ruby_hash['results'][18]["lineItems"]
   arr2=[]
   for i in arrayoflineitems do
     arr2<<{price_data: {currency: 'usd',product_data: {name: i["name"]["en"],},unit_amount: i["totalPrice"]["centAmount"],},quantity: i["quantity"],}
@@ -45,8 +45,5 @@ post '/create-checkout-session' do
   redirect session.url, 303
   
   puts(session,"chek this bro")
-  
- 
-puts(session1,"kirlum d chirlum")
  
 end
