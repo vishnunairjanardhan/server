@@ -20,7 +20,7 @@ apiendpointforcreatingcart='https://api.us-central1.gcp.commercetools.com/obongg
 apiendpointAddItemShippingAddress='https://api.us-central1.gcp.commercetools.com/obongg26te1hxzh/carts/b3f70512-c72a-480f-8070-2c83ed5b125e'  #this is cart id
 
 headers = {
-  'Authorization' =>'Bearer JJTvx3YvE8lxwwFvL473JALia52Mw-0W'
+  'Authorization' =>'Bearer y6bNJpQMfNnNUhvXvK7-V0SlXe3goivC'
   }
 
 post '/create-checkout-session' do
