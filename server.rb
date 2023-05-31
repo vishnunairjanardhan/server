@@ -17,10 +17,10 @@ Stripe.api_key = 'sk_test_51MyqLjSI2D9QZHezmFOXiVtw4idzlxFMr5x9KDtvJxfoxkKtFkoRn
 #  code for to get all carts 
 apiEndpointForcarts = 'https://api.us-central1.gcp.commercetools.com/obongg26te1hxzh/carts'
 apiendpointforcreatingcart='https://api.us-central1.gcp.commercetools.com/obongg26te1hxzh/carts'
-apiendpointAddItemShippingAddress='https://api.us-central1.gcp.commercetools.com/obongg26te1hxzh/carts/b3f70512-c72a-480f-8070-2c83ed5b125e'  #this is cart id
+  #this is cart id
 
 headers = {
-  'Authorization' =>'Bearer y6bNJpQMfNnNUhvXvK7-V0SlXe3goivC'
+  'Authorization' =>'Bearer KOXjpxX8xdzLM_0Mr3RR51j3uLTEIVgC'
   }
 
 post '/create-checkout-session' do
