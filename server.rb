@@ -11,16 +11,16 @@ require 'httparty'
 # set :static, true
 set :port, 4242
 
-YOUR_DOMAIN = 'http://localhost:3000/sucsess'
+YOUR_DOMAIN = 'http://localhost:3000/success'
 Stripe.api_key = 'sk_test_51MyqLjSI2D9QZHezmFOXiVtw4idzlxFMr5x9KDtvJxfoxkKtFkoRnoYBz1Lna3L6HGQ5vbTVobO9pp0NzfQkeuBy00MgMgIC3y'
 
 #  code for to get all carts 
-apiEndpointForcarts = 'https://api.us-central1.gcp.commercetools.com/obongg26te1hxzh/carts'
-apiendpointforcreatingcart='https://api.us-central1.gcp.commercetools.com/obongg26te1hxzh/carts'
+apiEndpointForcarts = 'https://api.us-central1.gcp.commercetools.com/99minds/carts'
+apiendpointforcreatingcart='https://api.us-central1.gcp.commercetools.com/99minds/carts'
   #this is cart id
 
 headers = {
-  'Authorization' =>'Bearer KJK6UX8JxP3xGUJCSZg8aMJN05pCmmDe'
+  'Authorization' =>'Bearer ge-zWn63c4Jg3-MQGuBSvcwRXRvRX2NC'
   }
 
 post '/create-checkout-session' do
@@ -32,7 +32,12 @@ post '/create-checkout-session' do
   arrayoflineitems=ruby_hash['results'].last["lineItems"]
   arr2=[]
   for i in arrayoflineitems do
-    arr2<<{price_data: {currency: 'usd',product_data: {name: i["name"]["en"],},unit_amount: i["totalPrice"]["centAmount"],},quantity: i["quantity"],}
+    arr2<<{price_data: {currency: 'usd',product_data: {name: i["name"]["en"],},
+    unit_amount: if i.key?("discountedPrice")
+    i["discountedPrice"]["value"]["centAmount"]
+    else
+    i["price"]["value"]["centAmount"] end,},quantity: i["quantity"],}
+    puts(unit_amount: i["totalPrice"]["centAmount"])
   end
   session = Stripe::Checkout::Session.create({
     line_items: arr2,
@@ -42,6 +47,7 @@ post '/create-checkout-session' do
     cancel_url: YOUR_DOMAIN + '?canceled=true',
     
   })
+  
   redirect session.url, 303
   
   puts(session,"chek this bro")
